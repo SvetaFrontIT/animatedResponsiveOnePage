@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Noto Serif SemBd';
+    src: url('subset-NotoSerif-SemiBold.eot');
+    src: url('subset-NotoSerif-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-NotoSerif-SemiBold.woff2') format('woff2'),
+        url('subset-NotoSerif-SemiBold.woff') format('woff'),
+        url('subset-NotoSerif-SemiBold.ttf') format('truetype'),
+        url('subset-NotoSerif-SemiBold.svg#NotoSerif-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('subset-OpenSans-Semibold.eot');
+    src: url('subset-OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('subset-OpenSans-Semibold.woff2') format('woff2'),
+        url('subset-OpenSans-Semibold.woff') format('woff'),
+        url('subset-OpenSans-Semibold.ttf') format('truetype'),
+        url('subset-OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('subset-OpenSans.eot');
+    src: url('subset-OpenSans.eot?#iefix') format('embedded-opentype'),
+        url('subset-OpenSans.woff2') format('woff2'),
+        url('subset-OpenSans.woff') format('woff'),
+        url('subset-OpenSans.ttf') format('truetype'),
+        url('subset-OpenSans.svg#OpenSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
