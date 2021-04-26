@@ -1,372 +1,358 @@
 @font-face {
-  font-family: "Noto Serif SemBd";
-  src: url("/fonts/subset-NotoSerif-SemiBold.eot");
-  src: url("/fonts/subset-NotoSerif-SemiBold.eot?#iefix") format("embedded-opentype"), url("/fonts/subset-NotoSerif-SemiBold.woff2") format("woff2"), url("/fonts/subset-NotoSerif-SemiBold.woff") format("woff"), url("/fonts/subset-NotoSerif-SemiBold.ttf") format("truetype"), url("/fonts/subset-NotoSerif-SemiBold.svg#NotoSerif-SemiBold") format("svg");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Noto Serif SemBd";
+    src: url("./fonts/subset-NotoSerif-SemiBold.eot");
+    src: url("./fonts/subset-NotoSerif-SemiBold.eot?#iefix") format("embedded-opentype"), url("./fonts/subset-NotoSerif-SemiBold.woff2") format("woff2"), url("./fonts/subset-NotoSerif-SemiBold.woff") format("woff"), url("./fonts/subset-NotoSerif-SemiBold.ttf") format("truetype"), url("./fonts/subset-NotoSerif-SemiBold.svg#NotoSerif-SemiBold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/subset-OpenSans-Semibold.eot");
-  src: url("/fonts/subset-OpenSans-Semibold.eot?#iefix") format("embedded-opentype"), url("/fonts/subset-OpenSans-Semibold.woff2") format("woff2"), url("/fonts/subset-OpenSans-Semibold.woff") format("woff"), url("/fonts/subset-OpenSans-Semibold.ttf") format("truetype"), url("/fonts/subset-OpenSans-Semibold.svg#OpenSans-Semibold") format("svg");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Open Sans";
+    src: url("./fonts/subset-OpenSans-Semibold.eot");
+    src: url("./fonts/subset-OpenSans-Semibold.eot?#iefix") format("embedded-opentype"), url("./fonts/subset-OpenSans-Semibold.woff2") format("woff2"), url("./fonts/subset-OpenSans-Semibold.woff") format("woff"), url("./fonts/subset-OpenSans-Semibold.ttf") format("truetype"), url("./fonts/subset-OpenSans-Semibold.svg#OpenSans-Semibold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-  font-family: "Open Sans";
-  src: url("/fonts/subset-OpenSans.eot");
-  src: url("/fonts/subset-OpenSans.eot?#iefix") format("embedded-opentype"), url("/fonts/subset-OpenSans.woff2") format("woff2"), url("/fonts/subset-OpenSans.woff") format("woff"), url("/fonts/subset-OpenSans.ttf") format("truetype"), url("/fonts/subset-OpenSans.svg#OpenSans") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Open Sans";
+    src: url("./fonts/subset-OpenSans.eot");
+    src: url("./fonts/subset-OpenSans.eot?#iefix") format("embedded-opentype"), url("./fonts/subset-OpenSans.woff2") format("woff2"), url("./fonts/subset-OpenSans.woff") format("woff"), url("./fonts/subset-OpenSans.ttf") format("truetype"), url("./fonts/subset-OpenSans.svg#OpenSans") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .navbar {
-  position: fixed;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.5s ease-in-out 0s;
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease-in-out 0s;
 }
 
 .nav__menu {
-  display: none;
-  top: 60px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-right: 20px;
-  width: 100vw;
-  text-decoration: none;
-  z-index: 200;
-  text-align: right;
+    display: none;
+    top: 60px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 20px;
+    width: 100vw;
+    text-decoration: none;
+    z-index: 200;
+    text-align: right;
 }
 
 .menu_dark,
 .menu_light,
 .image_light,
 .image_dark {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .nav_item__link {
-  text-decoration: none;
-  color: #ffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 44px;
-  text-transform: uppercase;
-  cursor: pointer;
+    text-decoration: none;
+    color: #ffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 44px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav__right {
-  padding-right: 15px;
+    padding-right: 15px;
 }
 
 .nav__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 60px;
 }
 
 .navbar.dark {
-  background-color: black;
+    background-color: black;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .presentation_image {
-  min-height: 100vw;
-  min-width: 100vw;
-  background-image: url(/images/sight.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -100;
+    min-height: 100vw;
+    min-width: 100vw;
+    background-image: url(./images/sight.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -100;
 }
 
 .presentation__video {
-  width: 100vw;
-  height: 100vw;
-  object-fit: cover;
+    width: 100vw;
+    height: 100vw;
+    object-fit: cover;
 }
 
 .presentation_circle {
-  position: absolute;
-  border-radius: 100%;
-  border: none;
-  min-height: 52vw;
-  min-width: 52vw;
-  background-color: #ffff;
-  z-index: 0;
-  margin: auto;
-  left: 24vw;
-  top: 24vw;
-  z-index: -100;
+    position: absolute;
+    border-radius: 100%;
+    border: none;
+    min-height: 52vw;
+    min-width: 52vw;
+    background-color: #ffff;
+    z-index: 0;
+    margin: auto;
+    left: 24vw;
+    top: 24vw;
+    z-index: -100;
 }
 
 .buffer {
-  padding-top: 161px;
-  position: relative;
+    padding-top: 161px;
+    position: relative;
 }
 
 .presentation__image_block {
-  position: relative;
-  border: none;
-  border-radius: 100%;
-  min-height: 100vw;
-  min-width: 100vw;
-  max-width: 1024px;
-  overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 100%;
+    min-height: 100vw;
+    min-width: 100vw;
+    max-width: 1024px;
+    overflow: hidden;
 }
 
 .presentation__text {
-  position: absolute;
-  top: 0;
-  transition: top 0.8s ease 0s;
+    position: absolute;
+    top: 0;
+    transition: top 0.8s ease 0s;
 }
 
 .presentation__text.move_up {
-  top: -100vw;
+    top: -100vw;
 }
 
 .section__presentation {
-  position: relative;
-  z-index: -10;
+    position: relative;
+    z-index: -10;
 }
 
 .presentation__link {
-  position: relative;
-  margin-top: 30vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 102;
-  text-decoration: none;
-  cursor: pointer;
+    position: relative;
+    margin-top: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 102;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .agency_name {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
-  color: black;
-  margin-bottom: 15px;
-  background: #ffff;
-  box-shadow: -15px 0 0 #ffff, 15px 0 0 #ffff;
-  padding-top: 0.5vw;
-  padding-bottom: 1.45vw;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: black;
+    margin-bottom: 15px;
+    background: #ffff;
+    box-shadow: -15px 0 0 #ffff, 15px 0 0 #ffff;
+    padding-top: 0.5vw;
+    padding-bottom: 1.45vw;
 }
 
 .main_text {
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-size: 7.7vw;
-  line-height: 10.6vw;
-  color: #ffff;
-  text-align: center;
-  margin-bottom: 6vw;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 7.7vw;
+    line-height: 10.6vw;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 6vw;
 }
 
 .main_text_title {
-  background: black;
-  box-shadow: -15px 0 0 black, 15px 0 0 black;
-  padding-top: 0.5vw;
-  padding-bottom: 1.45vw;
+    background: black;
+    box-shadow: -15px 0 0 black, 15px 0 0 black;
+    padding-top: 0.5vw;
+    padding-bottom: 1.45vw;
 }
 
 .arrow {
-  height: 32px;
-  width: 32px;
+    height: 32px;
+    width: 32px;
 }
 
 .content__image {
-  background-image: url(/images/notebook.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 324px;
-  width: 100%;
-  margin-bottom: 40px;
-  max-width: 635px;
-  min-width: 384px;
+    background-image: url(./images/notebook.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 324px;
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: 635px;
+    min-width: 384px;
 }
 
 .section__content {
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1140px;
-  margin-top: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1140px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .first_part,
 .second_part {
-  opacity: 0;
-  transition: opacity 0.8s ease-out 0s;
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0s;
 }
 
 .first_part.visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .second_part.visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .content__about {
-  font-family: "Noto Serif SemBd", serif;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 49px;
-  margin-bottom: 40px;
+    font-family: "Noto Serif SemBd", serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 40px;
 }
 
 .content__about__text,
 .content__image__text {
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 25.6px;
-  margin-bottom: 60px;
-  min-width: 384px;
-  max-width: 630px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin-bottom: 60px;
+    min-width: 384px;
+    max-width: 630px;
 }
 
 .first_part,
 .second_part {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .second_part {
-  flex-flow: row-reverse wrap;
-  align-items: center;
+    flex-flow: row-reverse wrap;
+    align-items: center;
 }
 
 @media screen and (min-width: 650px) {
-  .first_part,
-.second_part {
-    min-width: 384px;
-  }
+    .first_part,
+    .second_part {
+        min-width: 384px;
+    }
 }
+
 @media screen and (min-width: 1200px) {
-  .buffer {
-    padding-top: 0px;
-  }
-
-  .section__presentation {
-    max-width: 1024px;
-    margin: auto;
-  }
-
-  .nav__menu {
-    top: 0px;
-    display: block;
-    max-width: 678px;
-  }
-
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav__right {
-    display: none;
-  }
-
-  .nav__header {
-    max-width: 1080px;
-    margin: auto;
-  }
-
-  .image_dark {
-    width: 96.26px;
-    height: 80px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .presentation__link {
-    margin-top: 299px;
-  }
-
-  .presentation__text {
-    min-width: 1024px;
-  }
-
-  .agency_name {
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 75px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .main_text {
-    font-size: 72px;
-    line-height: 98px;
-    color: #ffff;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .presentation_image {
-    min-width: 1024px;
-    min-height: 1024px;
-  }
-
-  .presentation_circle {
-    min-width: 512px;
-    min-height: 512px;
-    left: 256px;
-    top: 256px;
-  }
-
-  .presentation__image_block {
-    min-width: 1024px;
-    min-height: 1024px;
-    max-width: 1024px;
-    margin: auto;
-    position: relative;
-  }
-
-  .section__content {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-
-  .content__about__text,
-.content__image__text {
-    line-height: 28.8px;
-  }
-
-  .content__about {
-    padding-left: 15px;
-  }
-
-  .content__image__text {
-    margin-right: 30px;
-    text-align: right;
-    max-width: 445px;
-  }
+    .buffer {
+        padding-top: 0px;
+    }
+    .section__presentation {
+        max-width: 1024px;
+        margin: auto;
+    }
+    .nav__menu {
+        top: 0px;
+        display: block;
+        max-width: 678px;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav__right {
+        display: none;
+    }
+    .nav__header {
+        max-width: 1080px;
+        margin: auto;
+    }
+    .image_dark {
+        width: 96.26px;
+        height: 80px;
+    }
+    .hidden {
+        display: none;
+    }
+    .presentation__link {
+        margin-top: 299px;
+    }
+    .presentation__text {
+        min-width: 1024px;
+    }
+    .agency_name {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 75px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .main_text {
+        font-size: 72px;
+        line-height: 98px;
+        color: #ffff;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .presentation_image {
+        min-width: 1024px;
+        min-height: 1024px;
+    }
+    .presentation_circle {
+        min-width: 512px;
+        min-height: 512px;
+        left: 256px;
+        top: 256px;
+    }
+    .presentation__image_block {
+        min-width: 1024px;
+        min-height: 1024px;
+        max-width: 1024px;
+        margin: auto;
+        position: relative;
+    }
+    .section__content {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .content__about__text,
+    .content__image__text {
+        line-height: 28.8px;
+    }
+    .content__about {
+        padding-left: 15px;
+    }
+    .content__image__text {
+        margin-right: 30px;
+        text-align: right;
+        max-width: 445px;
+    }
 }
