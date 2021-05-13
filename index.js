@@ -15,18 +15,18 @@ const container = document.querySelector('.container');
 const sectionContentAbout = document.querySelector('.first_part');
 const sectionContentImage = document.querySelector('.second_part');
 
-const firstBlockHeight = (+presentation.offsetHeight) + (+buffer.offsetHeight);
+const firstBlockHeight = (+presentation.clientHeight) + (+buffer.clientHeight);
 
 window.addEventListener("scroll", function() {
     let scrollPosition = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     changeNavBar(scrollPosition);
-    newBlockVisible(scrollPosition);
+    newBlockVisible();
     scaleCircle(scrollPosition);
 
 });
 
 function scaleCircle(scrollPosition) {
-    if (scrollPosition) {
+    if (scrollPosition > 0) {
         const scrollMove = 1 + Math.abs(scrollPosition) / 100;
 
         circle.style.cssText = `
@@ -52,9 +52,7 @@ function scaleCircle(scrollPosition) {
         circle.style.cssText = 'transform: scale3d(1, 1, 1);';
         videoBlock.style.cssText = 'transform: scale3d(1, 1, 1);';
     }
-    if (+scrollPosition >= (firstBlockHeight / 2)) {
-        presentation.style.opacity = 0;
-    }
+
     if (scrollPosition < 35) {
         presentation.style.opacity = 1;
         mainText.classList.remove('move_up');
@@ -62,15 +60,15 @@ function scaleCircle(scrollPosition) {
 }
 
 function changeNavBar(scrollPosition) {
-    if (scrollPosition >= firstBlockHeight) {
-        navBar.classList.add('dark');
+    if (scrollPosition >= (firstBlockHeight / 2)) {
+        navBar.classList.add('dark')
         navImageLight.classList.add('hidden');
         navImageDarkt.classList.remove('hidden');
         navMenuLight.forEach((item) => item.classList.add('hidden'));
         navMenuDark.classList.remove('hidden');
         navigation.classList.remove('hidden');
     }
-    if (scrollPosition < firstBlockHeight) {
+    if (scrollPosition < (firstBlockHeight / 2)) {
         navBar.classList.remove('dark');
         navImageLight.classList.remove('hidden');
         navImageDarkt.classList.add('hidden');
@@ -80,7 +78,7 @@ function changeNavBar(scrollPosition) {
     }
 }
 
-function newBlockVisible(scrollPosition) {
+function newBlockVisible() {
     let blockVisibleProcent = 0;
     const top = container.getBoundingClientRect().top;
     const height = container.offsetHeight;
@@ -101,9 +99,5 @@ function newBlockVisible(scrollPosition) {
             sectionContentImage.classList.add('visible');
         }, 1500);
 
-    }
-    if (scrollPosition <= 300) {
-        sectionContentAbout.classList.remove('visible');
-        sectionContentImage.classList.remove('visible');
     }
 }
