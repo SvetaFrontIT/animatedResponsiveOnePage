@@ -207,6 +207,7 @@
     margin-bottom: 40px;
     max-width: 635px;
     min-width: 384px;
+    border-radius: 3px;
 }
 
 .section__content {
